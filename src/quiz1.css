@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #ffdede;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
 }
@@ -10,7 +10,7 @@ body {
   width: 320px;
   min-height: 100vh;
   padding: 15px;
-  background-image: linear-gradient(#ffbdbd 1px, transparent 1px),
+  background-image: linear-gradient(#afbfe2 1px, transparent 1px),
     linear-gradient(90deg, #ffbdbd 1px, transparent 1px);
   background-size: 10px 10px;
 }
