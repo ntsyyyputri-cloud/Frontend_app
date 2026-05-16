@@ -1,4 +1,4 @@
-import './quiz1.css'
+import './quiz4.css'
 
 import finedu_icon from '../Assets/FinEdu+logo.png'
 
