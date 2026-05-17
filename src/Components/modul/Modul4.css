@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: white;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 390px;
+  min-height: 100vh;
+  margin: auto;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 8px;
+  box-sizing: border-box;
+}
+
+.auth-container h1 {
+  color: black;
+  font-size: 22px;
+  font-weight: normal;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.box {
+  width: 95%;
+  background: #e6e6e6;
+  border: 1px solid #8f8f8f;
+  padding: 10px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+.box h2 {
+  font-size: 18px;
+  margin: 0 0 8px 0;
+  color: black;
+  font-weight: bold;
+}
+
+.box p {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0;
+  color: black;
+  text-align: left;
+}
+
+.btn-primary {
+  width: 150px;
+  padding: 8px;
+  border: none;
+  border-radius: 20px;
+  background: #f7e600;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.btn-secondary {
+  width: 150px;
+  padding: 8px;
+  border: none;
+  border-radius: 20px;
+  background: #00cc33;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.btn-primary:hover {
+  background: #e6d000;
+}
+
+.btn-secondary:hover {
+  background: #00b32d;
+}

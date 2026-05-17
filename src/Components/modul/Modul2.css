@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: white;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 390px; /* ukuran layar hp */
+  min-height: 100vh;
+  margin: auto;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 8px;
+  box-sizing: border-box;
+}
+
+/* Judul */
+.auth-container h1 {
+  color: black;
+  font-size: 26px;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+/* Box materi */
+.box {
+  width: 95%;
+  background: #e6e6e6;
+  border: 1px solid #8f8f8f;
+  padding: 10px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+/* Judul dalam box */
+.box h2 {
+  font-size: 18px;
+  margin: 0 0 8px 0;
+  color: black;
+  font-weight: bold;
+}
+
+/* Isi */
+.box p {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0;
+  color: black;
+  text-align: left;
+}
+
+/* Tombol Quiz */
+.btn-primary {
+  width: 180px;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  background: #f7e600;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+/* Tombol Selanjutnya */
+.btn-secondary {
+  width: 180px;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  background: #00cc33;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.btn-primary:hover {
+  background: #e6d000;
+}
+
+.btn-secondary:hover {
+  background: #00b32d;
+}

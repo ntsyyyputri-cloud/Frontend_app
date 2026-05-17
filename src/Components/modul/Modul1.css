@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+.auth-container {
+  min-height: 100vh;
+  background: white; /* background putih */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+/* Judul utama */
+.auth-container h1 {
+  color: #333;
+  font-size: 38px;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+/* Box materi */
+.box {
+  width: 90%;
+  max-width: 350px;
+  background-color: #e6e6e6; /* abu */
+  border: 1px solid gray;
+  padding: 12px;
+  margin-bottom: 15px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* Judul dalam box */
+.box h2 {
+  font-size: 22px;
+  margin: 0 0 10px 0;
+  color: black;
+  font-weight: bold;
+}
+
+/* paragraf */
+.box p {
+  font-size: 18px;
+  color: black;
+  margin: 0;
+  line-height: 1.4;
+  text-align: left;
+}
+
+/* list */
+.box ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.box li {
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: black;
+}
+
+/* tombol quiz */
+.btn-primary {
+  width: 200px;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background-color: #f7e600;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* tombol modul selanjutnya */
+.btn-secondary {
+  width: 200px;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background-color: #00cc33;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-primary:hover {
+  background-color: #e6d000;
+}
+
+.btn-secondary:hover {
+  background-color: #00b32d;
+}
