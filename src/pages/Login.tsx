@@ -29,7 +29,6 @@ function Login() {
  
       <p className="switch-text">
         Tidak Punya Akun?{' '}
-        {/* ✅ Fixed: lowercase /signup to match route */}
         <span onClick={() => navigate('/signup')}>Daftar</span>
       </p>
     </div>

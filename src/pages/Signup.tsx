@@ -8,7 +8,6 @@ import password_icon from '../assets/password.png'
 import lahir_icon from '../assets/kalender.png'
 import gender_icon from '../assets/gender.png'
  
-// ✅ Fixed: renamed component to Signup (was LoginSignup, inconsistent)
 function Signup() {
   const navigate = useNavigate()
  
@@ -47,7 +46,6 @@ function Signup() {
         <input type="text" placeholder="Jenis Kelamin" maxLength={100} />
       </div>
  
-      {/* ✅ Fixed: privacy text styled separately */}
       <p className="privacy-text">
         Dengan Menekan Tombol Daftar, Anda Telah Menyetujui{' '}
         <strong>Kebijakan Privasi</strong>
@@ -57,7 +55,6 @@ function Signup() {
         Daftar
       </button>
  
-      {/* ✅ Fixed: "Masuk" now navigates back to login */}
       <p className="switch-text">
         Sudah Punya Akun?{' '}
         <span onClick={() => navigate('/login')}>Masuk</span>
