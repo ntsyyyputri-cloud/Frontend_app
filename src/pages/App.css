@@ -1,36 +1,133 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap');
+
+/* Reset */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
-body {
-  background: #d7ebff;
-}
-
-/* SPLASH SCREEN */
-
-.splash-container {
+/* Container */
+.container {
   width: 100%;
-  height: 100vh;
-  background: linear-gradient(to bottom, #2f67c7, #d7ebff);
+  min-height: 100vh;
+  background-color: #f0f0f5;
+}
+
+/* Navbar */
+.navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 12px 28px;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ddd;
 }
 
-.splash-content {
-  text-align: center;
-}
-
+/* Logo */
 .logo {
-  width: 140px;
-  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.splash-content h1 {
-  font-size: 38px;
-  color: #0d1b52;
+.logo-icon {
+  background-color: #1c3f8f;
+  color: white;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.logo-icon img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 19px;
+  font-weight: 700;
+  color: #111;
+  letter-spacing: -0.3px;
+}
+
+/* Buttons */
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 7px 22px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
   font-weight: 500;
+}
+
+.masuk {
+  background-color: #c7d2fe;
+  color: #3730a3;
+}
+
+.daftar {
+  background-color: #6366f1;
+  color: white;
+}
+
+/* Hero Section */
+/* background-image is set via inline style in App.tsx using the imported asset */
+.hero {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+/* Hero Text */
+.hero-text {
+  flex: 1;
+  max-width: 480px;
+}
+
+.hero-text h1 {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.35;
+  color: #0f0f0f;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
+
+/* Hero image tag is hidden — image is used as CSS background via inline style */
+.hero-image {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 36px 24px;
+    background-position: bottom center;
+    min-height: 320px;
+  }
+
+  .hero-text h1 {
+    font-size: 22px;
+  }
 }

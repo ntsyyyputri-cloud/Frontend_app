@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+
+/* ══════════════════════════════
+   COMPLETION PAGE
+══════════════════════════════ */
+
+.selesai-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #5566f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 40px 24px;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+}
+
+.selesai-img {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  animation: pop 0.5s cubic-bezier(0.36, 1.5, 0.6, 1) both;
+  margin-bottom: 8px;
+}
+
+@keyframes pop {
+  from { transform: scale(0.4); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+
+.selesai-title {
+  font-size: 28px;
+  font-weight: 900;
+  color: white;
+  line-height: 1.3;
+  max-width: 480px;
+}
+
+.selesai-subtitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.selesai-btn {
+  margin-top: 16px;
+  border: 2px solid white;
+  border-radius: 30px;
+  background: transparent;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 12px 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.selesai-btn:hover {
+  background: white;
+  color: #5566f5;
+}

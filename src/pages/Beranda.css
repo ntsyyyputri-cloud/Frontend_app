@@ -1,206 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #cccccc;
+/* Layout */
+.dashboard {
   min-height: 100vh;
-  margin: 0;
-}
-
-.beranda-container {
-  width: 393px;
-  height: 100vh;
-  max-height: 852px;
-  background-color: white;
-  margin: 0 auto;
-  overflow: hidden;
+  background: linear-gradient(to bottom, #dce3ed, #c2d4e0);
   display: flex;
   flex-direction: column;
 }
 
-.beranda-header {
-  background: linear-gradient(180deg, #1e3a8a 0%, #3b5fc0 100%);
-  padding: 8px 18px 20px 18px;
-  position: relative;
-  flex-shrink: 0;
-}
-
-.status-bar {
+/* ── Navbar ── */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
-}
-
-.status-jam {
-  height: 24px;
-  width: auto;
-}
-
-.status-batrai {
-  height: 22px;
-  width: auto;
-}
-
-.logo-section {
-  display: flex;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-}
-
-.logo-box {
-  width: 58px;
-  height: 58px;
-  border-radius: 10px;
-  overflow: visible;
-  margin-right: 12px;
+  padding: 12px 24px;
+  background: #e8eaf0;
+  border-bottom: 1px solid #d0d4de;
   flex-shrink: 0;
 }
 
-.logo-box img {
-  width: 58px;
-  height: 58px;
-  object-fit: contain;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+}
+
+.logo-icon {
+  background: #3b82f6;
+  width: 36px;
+  height: 36px;
   border-radius: 8px;
-}
-
-.logo-text h1 {
-  font-size: 20px;
-  color: white;
-  font-weight: bold;
-  line-height: 1.2;
-  margin: 0;
-  letter-spacing: normal;
-}
-
-.logo-text p {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.85);
-  margin: 0;
-}
-
-.wave-svg {
-  display: block;
-  width: 100%;
-  height: 70px;
-  background: linear-gradient(180deg, #3b5fc0 0%, #60a5fa 100%);
-  margin-top: -1px;
-  flex-shrink: 0;
-}
-
-.beranda-content {
-  flex: 1;
-  overflow-y: auto;
   display: flex;
-  flex-direction: column;
-  background-color: white;
-}
-
-.skor-container {
-  background-color: #d9d9d9;
-  width: 85%;
-  max-width: 320px;
-  padding: 16px;
-  margin: 20px auto 0;
-  border-radius: 22px;
-  display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  align-items: center;
+  overflow: hidden;
   flex-shrink: 0;
 }
 
-.skor-container p {
-  font-size: 13px;
-  color: #444;
-  margin: 0;
-}
-
-.skor-container h2 {
-  font-size: 44px;
-  font-weight: normal;
-  color: #000;
-  margin: 4px 0 0 0;
-  line-height: 1;
-}
-
-.menu-list {
-  margin-top: 20px;
-  padding: 0 35px;
-}
-
-.menu-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  cursor: pointer;
-  padding: 5px;
-}
-
-.menu-item:active {
-  opacity: 0.7;
-}
-
-.menu-item img {
-  width: 55px;
-  height: 55px;
-  margin-right: 18px;
-  object-fit: contain;
-}
-
-.menu-item span {
-  font-size: 20px;
-  color: #000;
-  font-weight: 500;
-}
-
-.bottom-nav {
-  background-color: #4a6fa5;
-  width: 100%;
-  height: 65px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-shrink: 0;
-  margin-top: auto;
-}
-
-.nav-item {
-  text-align: center;
-  cursor: pointer;
-}
-
-.nav-item img {
+.logo-icon img {
   width: 24px;
   height: 24px;
-  filter: brightness(0) invert(1);
+  object-fit: contain;
 }
 
-.nav-item p {
+/* ── Profile ── */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  color: #333;
+}
+
+.profile-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ── Page Body (below navbar) ── */
+.page-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 16px;
+  flex: 1;
+}
+
+/* ── Hero ── */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #7b86e2, #8fa3f0);
+  border-radius: 20px;
+  padding: 28px 32px;
   color: white;
-  font-size: 11px;
-  margin-top: 1px;
+  height: 160px;
+  flex-shrink: 0;
+  position: relative;
 }
 
-@media screen and (max-width: 420px) {
-  .beranda-container {
-    width: 100%;
-    height: 100vh;
-    max-height: none;
-  }
-  body {
-    align-items: stretch;
-  }
+.hero-text {
+  flex: 1;
 }
 
-@media screen and (max-width: 360px) {
-  .logo-text h1 { font-size: 18px; }
-  .skor-container h2 { font-size: 38px; }
-  .menu-item img { width: 48px; height: 48px; }
-  .menu-item span { font-size: 18px; }
+.hero-text h1 {
+  font-family: "Georgia", serif;
+  font-size: 36px;
+  font-weight: bold;
+  font-style: italic;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.hero-text p {
+  margin-top: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-img {
+  width: 180px;
+  height: 150px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* ── Features ── */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.features h2 {
+  font-family: "Georgia", serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  color: #1a1a2e;
+}
+
+/* ── Feature Cards ── */
+.feature-grid {
+  display: flex;
+  gap: 16px;
+}
+
+.card {
+  flex: 1;
+  border-radius: 20px;
+  padding: 24px 20px 20px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 240px;
+}
+
+.card img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  flex: 1;
+}
+
+.card p {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-top: 12px;
+  flex-shrink: 0;
+}
+
+.modul {
+  background: #f0eca0;
+}
+
+.simulasi {
+  background: #a8e6a3;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .hero-text h1 {
+    font-size: 26px;
+  }
+
+  .hero-img {
+    width: 140px;
+    height: auto;
+  }
+
+  .feature-grid {
+    flex-direction: column;
+  }
 }

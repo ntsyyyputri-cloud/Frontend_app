@@ -1,7 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import './History.css'
-import StatusBar from './StatusBar'
 
 import topiLogo from '../assets/topi.png'
 import bukuLogo from '../assets/buku.svg'
@@ -22,7 +21,6 @@ function History() {
   return (
     <div className="history-container">
       <div className="history-header">
-        <StatusBar />
         <div className="header-row">
           <img src={backIcon} alt="Back" className="back-btn" onClick={() => navigate('/beranda')} />
           <img src={topiLogo} alt="Logo" className="header-logo" />

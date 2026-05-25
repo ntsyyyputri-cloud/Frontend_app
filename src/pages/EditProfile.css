@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+}
+
+/* ── Page wrapper ── */
+.edit-profile-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header banner ── */
+.edit-profile-header {
+  width: 100%;
+  background: #7b7ff5;
+  padding: 32px 40px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.edit-profile-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 1;
+}
+
+.edit-profile-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #1a1a2e;
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.1;
+}
+
+.edit-profile-subtitle {
+  font-size: 14px;
+  color: #1a1a2e;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+}
+
+/* ── Illustration image on the right ── */
+.edit-profile-illustration {
+  flex-shrink: 0;
+  height: 120px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.edit-profile-illustration img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* ── Form area ── */
+.edit-profile-form {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 0 0;
+}
+
+/* ── Each form row ── */
+.edit-profile-field {
+  display: flex;
+  align-items: center;
+  padding: 18px 40px;
+  border-bottom: 1px solid #e8e8e8;
+  gap: 16px;
+}
+
+.edit-profile-field:first-child {
+  border-top: 1px solid #e8e8e8;
+}
+
+.field-label {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+  font-family: Arial, sans-serif;
+  min-width: 130px;
+  flex-shrink: 0;
+}
+
+.field-input {
+  flex: 1;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0 14px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  color: #111;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.field-input:focus {
+  border-color: #7b7ff5;
+  box-shadow: 0 0 0 3px rgba(123, 127, 245, 0.12);
+}
+
+/* ── Simpan button ── */
+.edit-profile-footer {
+  display: flex;
+  justify-content: center;
+  padding: 48px 40px 40px;
+}
+
+.simpan-btn {
+  width: 160px;
+  height: 44px;
+  background: #22c4f0;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  letter-spacing: 0.02em;
+}
+
+.simpan-btn:hover {
+  background: #0fb3de;
+}

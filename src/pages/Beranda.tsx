@@ -1,68 +1,62 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Beranda.css'
-import StatusBar from './StatusBar'
-
-import topiLogo from '../assets/topi.png'
-import bukuLogo from '../assets/buku.svg'
-import lampuPensilLogo from '../assets/pensillampu.png'
-import iconHome from '../assets/home.svg'
-import iconHistory from '../assets/history.svg'
-import iconProfile from '../assets/profile.svg'
+import dashboard from '../assets/dashboard.png'
+import Profil from '../assets/gender.png'
+import Logo from '../assets/FinEdu.png'
+import modul from '../assets/modul.png'
+import simulasi from '../assets/sim.png'
 
 function Beranda() {
   const navigate = useNavigate()
 
   return (
-    <div className="beranda-container">
-      <div className="beranda-header">
-        <StatusBar />
-        <div className="logo-section">
-          <div className="logo-box">
-            <img src={topiLogo} alt="Logo FinEdu+" />
-          </div>
-          <div className="logo-text">
-            <h1>FinEdu+</h1>
-            <p>Literasi Keuangan</p>
-          </div>
-        </div>
-      </div>
+    <div className="dashboard">
 
-      <svg className="wave-svg" viewBox="0 0 393 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,20 C70,60 140,0 210,35 C280,70 340,10 393,30 L393,70 L0,70 Z" fill="white" />
-      </svg>
-
-      <div className="beranda-content">
-        <div className="skor-container">
-          <p>Skor Literasi Keuangan Anda</p>
-          <h2>70</h2>
+      {/* Navbar */}
+      <header className="navbar">
+        <div className="logo">
+          <div className="logo-icon">
+            <img src={Logo} alt="FinEdu+" />
+          </div>
+          <span>FinEdu+</span>
         </div>
 
-        <div className="menu-list">
-          <div className="menu-item" onClick={() => navigate('/modul')}>
-            <img src={bukuLogo} alt="Modul" />
-            <span>Modul</span>
-          </div>
-          <div className="menu-item" onClick={() => alert('Buka halaman Simulasi')}>
-            <img src={lampuPensilLogo} alt="Simulasi" />
-            <span>Simulasi</span>
-          </div>
+        <div className="profile" onClick={() => navigate('/profile')}>
+          <img src={Profil} alt="Profil" className="profile-img" />
+          <span>Profil</span>
         </div>
-      </div>
+      </header>
 
-      <div className="bottom-nav">
-        <div className="nav-item" onClick={() => navigate('/beranda')}>
-          <img src={iconHome} alt="Home" />
-          <p>Home</p>
-        </div>
-        <div className="nav-item" onClick={() => navigate('/history')}>
-          <img src={iconHistory} alt="History" />
-          <p>History</p>
-        </div>
-        <div className="nav-item" onClick={() => navigate('/login')}>
-          <img src={iconProfile} alt="Profile" />
-          <p>Profile</p>
-        </div>
+      {/* Page body — hero then features, stacked cleanly */}
+      <div className="page-body">
+
+        {/* Hero */}
+        <section className="hero">
+          <div className="hero-text">
+            <h1>Hi, Vokasioner</h1>
+            <p>Mulai tingkatkan literasi keuanganmu hari ini</p>
+          </div>
+          <img src={dashboard} alt="Hero" className="hero-img" />
+        </section>
+
+        {/* Features */}
+        <section className="features">
+          <h2>Fitur Kami</h2>
+
+          <div className="feature-grid">
+            <div className="card modul" onClick={() => navigate('/modul')}>
+              <img src={modul} alt="Modul" />
+              <p>Modul Digital</p>
+            </div>
+
+            <div className="card simulasi" onClick={() => navigate('/simulasi')}>
+              <img src={simulasi} alt="Simulasi" />
+              <p>Simulasi</p>
+            </div>
+          </div>
+        </section>
+
       </div>
     </div>
   )

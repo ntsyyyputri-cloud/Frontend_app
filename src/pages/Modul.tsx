@@ -1,50 +1,70 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Modul.css'
-import StatusBar from './StatusBar'
 
-import topiLogo from '../assets/topi.png'
-import bukuLogo from '../assets/buku.svg'
-import backIcon from '../assets/back.svg'
+import topiLogo   from '../assets/topi.png'
+import backIcon   from '../assets/back.svg'
+import iconEwallet   from '../assets/wallet.png'
+import iconBudget    from '../assets/budgeting.png'
+import iconKontrol   from '../assets/pengeluaran.png'
+import iconResiko    from '../assets/keamanan.png'
 
 function Modul() {
   const navigate = useNavigate()
 
   const modules = [
-    { title: 'Modul 1', subtitle: 'E-Wallet' },
-    { title: 'Modul 2', subtitle: 'Budgeting' },
-    { title: 'Modul 3', subtitle: 'Kontrol Pengeluaran' },
-    { title: 'Modul 4', subtitle: 'Manajemen Resiko Digital' },
+    { label: 'Modul 1', subtitle: 'E-Wallet',                    icon: iconEwallet,  route: '/modul1' },
+    { label: 'Modul 2', subtitle: 'Budgeting',                   icon: iconBudget,   route: '/modul2' },
+    { label: 'Modul 3', subtitle: 'Kontrol\nPengeluaran',        icon: iconKontrol,  route: '/modul3' },
+    { label: 'Modul 4', subtitle: 'Manajemen Resiko\nDigital',   icon: iconResiko,   route: '/modul4' },
   ]
 
   return (
     <div className="modul-container">
+
+      {/* ── Header ── */}
       <div className="modul-header">
-        <StatusBar />
         <div className="header-row">
-          <img src={backIcon} alt="Back" className="back-btn" onClick={() => navigate('/beranda')} />
+          <img
+            src={backIcon}
+            alt="Back"
+            className="back-btn"
+            onClick={() => navigate('/beranda')}
+          />
           <img src={topiLogo} alt="Logo" className="header-logo" />
           <span className="header-title">FinEdu+</span>
         </div>
       </div>
 
-      <svg className="wave-svg" viewBox="0 0 402 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,20 C80,55 160,5 240,35 C320,65 360,15 402,30 L402,70 L0,70 Z" fill="white" />
-      </svg>
+      {/* ── Wave divider ── */}
 
+
+      {/* ── Cards ── */}
       <div className="modul-content">
-        <div className="modul-list">
+        <div className="modul-grid">
           {modules.map((item, i) => (
-            <div className="modul-card" key={i}>
-              <img src={bukuLogo} alt="Buku" className="card-icon" />
-              <div className="card-text">
-                <p className="card-title">{item.title}</p>
-                <p className="card-subtitle">{item.subtitle}</p>
-              </div>
+            <div
+              className="modul-card"
+              key={i}
+              onClick={() => navigate(item.route)}
+            >
+              <span className="card-module-label">{item.label}</span>
+
+              <img src={item.icon} alt={item.subtitle} className="card-icon" />
+
+              <p className="card-subtitle">
+                {item.subtitle.split('\n').map((line, j, arr) => (
+                  <React.Fragment key={j}>
+                    {line}
+                    {j < arr.length - 1 && <br />}
+                  </React.Fragment>
+                ))}
+              </p>
             </div>
           ))}
         </div>
       </div>
+
     </div>
   )
 }

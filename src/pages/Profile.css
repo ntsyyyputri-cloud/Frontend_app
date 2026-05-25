@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #ffffff;
+}
+
+/* ── Page wrapper ── */
+.profile-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* ── Purple banner ── */
+.profile-banner {
+  width: 100%;
+  height: 190px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.profile-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 15% 70%, #7c3aed 0%, transparent 50%),
+    radial-gradient(ellipse at 60% 20%, #4c1d95 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 80%, #6d28d9 0%, transparent 45%),
+    radial-gradient(ellipse at 35% 10%, #3b0764 0%, transparent 60%),
+    linear-gradient(135deg, #1e0a4a 0%, #4c1d95 35%, #7c3aed 65%, #5b21b6 100%);
+}
+
+.profile-banner__noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0.18;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+/* ── Avatar row: avatar left, edit button right ── */
+.profile-avatar-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 40px;
+  margin-top: -65px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Circular avatar ── */
+.profile-avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: #f5c6d0;
+  border: 4px solid #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── Edit button ── */
+.edit-btn {
+  height: 42px;
+  padding: 0 32px;
+  border: 1.5px solid #1a1a2e;
+  border-radius: 8px;
+  background: white;
+  font-size: 14px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-weight: 500;
+  color: #1a1a2e;
+  cursor: pointer;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  transition: background 0.15s;
+  letter-spacing: 0.01em;
+}
+
+.edit-btn:hover {
+  background: #f5f5f5;
+}
+
+/* ── Name ── */
+.profile-name {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111;
+  padding: 18px 40px 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  letter-spacing: -0.01em;
+}
+
+/* ── Divider ── */
+.profile-divider {
+  height: 1px;
+  background: #eeeeee;
+  margin: 20px 40px 0;
+}
+
+/* ── Info row: 3 columns ── */
+.profile-info-row {
+  display: flex;
+  padding: 24px 40px 48px;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.profile-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.info-label {
+  font-size: 13px;
+  color: #999;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.info-value {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+}
+
+.info-value--email {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ── Back button ── */
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  z-index: 3;
+  filter: brightness(0) invert(1);
+}
